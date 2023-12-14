@@ -1,8 +1,10 @@
 "use client"
 import { CollarColor } from "@/EnumStates/DogCollarColors";
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
+import Popup from 'reactjs-popup';
 
-const SingleDog = ({id, x, y, color} : {id:string, x: number, y: number, color : CollarColor}) => {
+const SingleDog = ({id, name, x, y, color} : {id: string, name: string, x: number, y: number, color : CollarColor}) => {
+    const [dogName, setDogName] = useState(name)
     const [dogID, setDogID] = useState(id);
     const [dogColor, setDogColor] = useState(color)
     const [rightMoveEffect, setRightMoveEffect] = useState(false)
@@ -10,6 +12,14 @@ const SingleDog = ({id, x, y, color} : {id:string, x: number, y: number, color :
     const [src, setSrc] = useState("dogs/red_dog/red_dog_still_right.png")
     const [xPos, setXPos] = useState(x)
     const [yPos, setYPos] = useState(y)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            startMove()
+            // console.log("Fired")
+        }, 5000)
+        return () => clearInterval(interval)
+    }, [])
 
     function startMove() {
         const randomNumber = Math.random();
@@ -39,14 +49,19 @@ const SingleDog = ({id, x, y, color} : {id:string, x: number, y: number, color :
 
     return (
         <div>
-            <img className={`${rightMoveEffect && "animate-DogWalkRight"} ${leftMoveEffect && "animate-DogWalkLeft"}`} 
-            onClick={startMove}
-            onAnimationEnd={clearMove}
-            src={src} alt="Dog with red collar" width="170" height="170" style={{position: "absolute", left: `${xPos}px`, top: `${yPos}px`}}/>
+            <Popup trigger={
+                <img className={`${rightMoveEffect && "animate-DogWalkRight"} ${leftMoveEffect && "animate-DogWalkLeft"}`} 
+                    onClick={startMove}
+                    onAnimationEnd={clearMove}
+                    src={src} alt="Dog with red collar" width="130" height="130" 
+                    style={{position: "absolute", left: `${xPos}px`, top: `${yPos}px`}}/>} 
+                    position="right center">
+                <div>Popup content here !!</div>
+            </Popup>
+            <h1 className={`${rightMoveEffect && "animate-DogWalkRight"} ${leftMoveEffect && "animate-DogWalkLeft"}` }  
+                style={{position: "absolute", left: `${xPos}px`, top: `${yPos-30}px`}}>{dogName}</h1>
+            
         </div>
-
-
-        
     )
 }
 

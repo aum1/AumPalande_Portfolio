@@ -1,13 +1,14 @@
-import Image from 'next/image'
+import DogGameBuilder from '@/components/DogGame/DogGameBuilder'
 import NavigationBar from '@/components/NavigationBar'
-import SingleStar from '@/components/Stars/SingleStar'
+import StarBuilder from '@/components/Stars/StarBuilder'
 
 export default function Home() {
   return (
     <div>
         <div>
             <NavigationBar />
-            <SingleStar x={1} y={1} />
+            {/* <StarBuilder /> */}
+            <DogGameBuilder />
         </div>
     </div>
   )

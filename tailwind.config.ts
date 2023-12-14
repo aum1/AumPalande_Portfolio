@@ -13,6 +13,28 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        DogWalkRight: {
+            '0%': {
+                transform: 'translateX(0px)',
+            },
+            '100%': {
+                transform: 'translateX(500px)',
+            }
+        },
+        DogWalkLeft: {
+            '0%': {
+                transform: 'translateX(0px)',
+            },
+            '100%': {
+                transform: 'translateX(-500px)',
+            }
+        }
+      },
+      animation: {
+        DogWalkRight: 'DogWalkRight 5s ease-in-out',
+        DogWalkLeft: 'DogWalkLeft 5s ease-in-out',
+      }
     },
   },
   plugins: [

@@ -1,7 +1,7 @@
-const SingleStar = ({x, y} : {x: number, y: number}) => {
+const SingleStar = ({x, y} : {x: number, y: number, }) => {
     return (
-        <div>
-            <img src="star_five_one.png" alt="star" className="animate-jump animate-infinite animate-duration-[5000ms] animate-delay-0 animate-ease-in-out"/>
+        <div className="animate-fade-up animate-once animate-duration-[2000ms] animate-delay-[3500ms]">
+            <img src="stars/star_one_gif.gif" alt="star" style={{position: "absolute", left: `${x}px`, top: `${y}px`}}/>
         </div>
     )
 }

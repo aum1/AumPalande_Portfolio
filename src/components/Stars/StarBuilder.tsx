@@ -1,9 +1,24 @@
 import SingleStar from "./SingleStar";
+import Intro from "./Intro";
+// import {useWindowDimensions} from 'react-native';
 
 const StarBuilder = () => {
+    // const {height, width} = useWindowDimensions();
+    let width = 1800;
+    let height = 100;
+    let maxDelay = 3500;
+
     return (
         // temp star position and whatnot
-        <SingleStar x={1} y={1} />
+        <div className="w w-">
+            <Intro />
+            <SingleStar x={(Math.random() * (width + 1)) + 1} y={(Math.random() * (height + 1)) + 1} />
+            <SingleStar x={(Math.random() * (width + 1)) + 1} y={(Math.random() * (height + 1)) + 1} />
+            <SingleStar x={(Math.random() * (width + 1)) + 1} y={(Math.random() * (height + 1)) + 1} />
+            <SingleStar x={(Math.random() * (width + 1)) + 1} y={(Math.random() * (height + 1)) + 1} />
+            <SingleStar x={(Math.random() * (width + 1)) + 1} y={(Math.random() * (height + 1)) + 1} />
+            <SingleStar x={(Math.random() * (width + 1)) + 1} y={(Math.random() * (height + 1)) + 1} />
+        </div>
     )
 }
 

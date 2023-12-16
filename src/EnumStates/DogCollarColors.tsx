@@ -1,8 +1,8 @@
 export enum CollarColor {
-    Red = 1,
-    Orange,
-    Yellow,
-    Green,
-    Blue,
-    Purple
+    Red = "red",
+    Orange = "orange",
+    Yellow = "yellow",
+    Green = "green",
+    Blue = "blue",
+    Purple = "purple"
 }

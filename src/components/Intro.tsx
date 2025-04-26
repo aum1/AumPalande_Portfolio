@@ -19,7 +19,7 @@ const Intro = () => {
                         Masters Computer Science Student at Texas A&M University
                     </p>
                     <button className="text-2xl bg-white border-4 border-green-400 hover:bg-green-400 text-black font-bold py-2 px-4 rounded transition duration-300">
-                        <a href="#about">About Me</a>
+                        <a href="about">About Me</a>
                     </button>
                 </div>
                 

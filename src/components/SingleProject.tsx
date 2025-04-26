@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { Rocket, FileDown } from 'lucide-react';
 import React from 'react';
 import Badge from './Badge';
 
@@ -16,9 +17,11 @@ interface SingleProjectProps {
     detailedDescription: string;
     imageSrc: string;
     badges: string[];
+    githubLink: string;
+    documentationLink: string;
   }
 
-const SingleProject = ({title, description, detailedDescription, imageSrc, badges}: SingleProjectProps) => {
+const SingleProject = ({title, description, detailedDescription, imageSrc, badges, githubLink, documentationLink}: SingleProjectProps) => {
   const [expanded, setExpanded] = useState(false);
   const toggleExpand = () => {
     setExpanded(!expanded);
@@ -40,6 +43,19 @@ const SingleProject = ({title, description, detailedDescription, imageSrc, badge
                 {badges && (badges.map((badgeText, index) => (
                     <Badge text={badgeText} color={getRandomColor()}/>
                 )))}
+            </div>
+            <div className="flex flex-col pl-2 pr-2">
+                {expanded ? (
+                    githubLink && (
+                        <a href={githubLink} target='_blank' className="pr-20 text-green-400 hover:underline">Github <Rocket /> </a>
+                    )
+                ) : (<p></p>)}
+
+                {expanded ? (
+                    documentationLink && (
+                        <a href={documentationLink} download className="text-green-400 hover:underline">Download Documentation <FileDown /> </a>
+                    )
+                ) : (<p></p>)}
             </div>
         </div>
     </div>

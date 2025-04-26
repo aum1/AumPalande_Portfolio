@@ -1,10 +1,10 @@
 import SingleStar from "./SingleStar";
-import Intro from "./Intro";
+import Intro from "../Intro";
 // import {useWindowDimensions} from 'react-native';
 
 const StarBuilder = () => {
     // const {height, width} = useWindowDimensions();
-    let width = 1800;
+    let width = 100;
     let height = 100;
     let maxDelay = 3500;
 

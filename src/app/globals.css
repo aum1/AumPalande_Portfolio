@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tailwindcss/utilities";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -28,3 +27,38 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 2s ease-in-out forwards;
+}
+
+.fade-up.one {
+    animation-delay: 0s;
+}
+
+.fade-up.two {
+    animation-delay: 1.5s;
+}
+
+.fade-up.three {
+    animation-delay: 3s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }

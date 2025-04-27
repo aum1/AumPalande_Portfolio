@@ -52,8 +52,8 @@ const projectData = [
 
 const ProjectBuilder = () => {
     return (
-        <div className="pl-10 flex flex-col items-center justify-center min-h-screen">
-            <h1 className="text-3xl font-bold text-green-400">Projects</h1>
+        <div className="no-scrollbar pl-10 flex flex-col items-center justify-center min-h-screen">
+            <h1 className="text-3xl font-bold text-green-400 pr-10">Portfolio</h1>
             <div className="w-full grid grid-cols-2 mt-4 mb-4">
                 {projectData.map((project, index) => (
                     <SingleProject

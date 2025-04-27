@@ -1,18 +1,18 @@
 const Intro = () => {
     return (
         <div className="text-6xl text-center">
-            <div className="text-green-400 animate-fade-up animate-once">
+            <div className="fade-up text-green-400 animate-fade-up animate-once">
                 <h1>
                     Hi.
                 </h1>
             </div>
-            <div className="text-green-400 animate-fade-up animate-once animate-delay-[1500ms]">
+            <div className="fade-up two text-green-400 animate-fade-up animate-once animate-delay-[1500ms]">
                 <h2>
                     I'm Aum Palande.
                 </h2>
             </div>
 
-            <div className="animate-fade-up animate-once animate-duration-[2000ms] animate-delay-[3500ms] flex flex-row w-3/4 h-1/2 space-y-8 mt-8 mx-auto">
+            <div className="fade-up three animate-fade-up animate-once animate-duration-[2000ms] animate-delay-[3500ms] flex flex-row w-3/4 h-1/2 space-y-8 mt-8 mx-auto">
                 <img className="w-1/2" src="other/self_image.jpg" alt="Temp PFP"/>
                 <div className="w-1/2 pl-12 align-text-middle">
                     <p className="text-green-400">

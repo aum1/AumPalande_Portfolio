@@ -29,8 +29,8 @@ const SingleProject = ({title, description, detailedDescription, imageSrc, badge
 
   return (
     <>
-    <div className={`flex items-center w-full mt-10 space-x-4 bg-black border-2 border-green-500 rounded-full px-6 py-4 max-w-2xl shadow-md transition-all duration-500  cursor-pointer 
-            ${expanded ? "flex-col rounded-2xl scale-105 min-h-full py-8 pb-10" : "flex transform hover:scale-[1.02] h-[170px]"}`}
+    <div className={`flex items-center w-full mt-10 space-x-4 bg-black border-2 border-green-500 rounded-2xl px-6 py-4 max-w-2xl shadow-md transition-all duration-500  cursor-pointer 
+            ${expanded ? "flex-col scale-105 min-h-full py-8 pb-10" : "flex transform hover:scale-[1.02] h-[170px]"}`}
             onClick={toggleExpand}>
             <div></div>
         <img src={imageSrc} alt="Project" className={`rounded-full object-cover${expanded ? "w-24 h-24 mb-4" : "w-12 h-12 mb-4"}`} />
@@ -41,7 +41,7 @@ const SingleProject = ({title, description, detailedDescription, imageSrc, badge
             </p>
             <div className="flex flex-row">
                 {badges && (badges.map((badgeText, index) => (
-                    <Badge text={badgeText} color={getRandomColor()}/>
+                    <Badge text={badgeText} color={getRandomColor()} key={`${index}`}/>
                 )))}
             </div>
             <div className="flex flex-col pl-2 pr-2">

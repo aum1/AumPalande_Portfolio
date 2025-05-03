@@ -53,8 +53,35 @@ const projectData = [
 const ProjectBuilder = () => {
     return (
         <div className="no-scrollbar pl-10 flex flex-col items-center justify-center min-h-screen">
+            {/* 'green-400', 'red-400', 'blue-400', 'yellow-400', 'purple-400', 'pink-400', 'orange-400', 'teal-400']; */}
+            {/* render in the colors for the portfolio page to work */}
+
+            <div className="opacity-0 mt-0 mb-0 justify-self-start text-xs flex flex-row">
+                <p className=" text-blue-400">
+                    blue
+                </p>
+                <p className=" text-red-400">
+                    red
+                </p>
+                <p className="text-yellow-400">
+                    yellow
+                </p>
+                <p className=" text-purple-400">
+                    purple
+                </p>
+                <p className=" text-pink-400">
+                    pink
+                </p>
+                <p className=" text-orange-400">
+                    orange
+                </p>
+                <p className="opacity-0 text-teal-400">
+                    teal
+                </p>
+            </div>
+            
             <h1 className="text-3xl font-bold text-green-400 pr-10">Portfolio</h1>
-            <div className="w-full grid grid-cols-2 mt-4 mb-4">
+            <div className="w-full pb-50 grid grid-cols-2 mt-4 mb-4">
                 {projectData.map((project, index) => (
                     <SingleProject
                         key={index}

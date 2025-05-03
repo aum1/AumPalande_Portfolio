@@ -1,11 +1,12 @@
 import NavigationBar from '@/components/NavigationBar'
 import Intro from "@/components/Intro";
+import BackgroundDots from '@/components/BackgroundDots';
 
 export default function Home() {
   return (
     <div className="no-scrollbar font-mono overflow-y-scroll scrollbar-hide">
         <div className="flex flex-col">
-            <div className="fade-up three">
+            <div className="">
                 <NavigationBar />
             </div>
 
@@ -13,6 +14,10 @@ export default function Home() {
                 <div>
                     <Intro />
                 </div>
+            </div>
+
+            <div>
+                <BackgroundDots />
             </div>
         </div>
     </div>

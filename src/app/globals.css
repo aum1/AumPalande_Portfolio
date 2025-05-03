@@ -24,9 +24,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-html {
-  scroll-behavior: smooth;
-}
 
 .fade-up {
     opacity: 0;
@@ -39,11 +36,11 @@ html {
 }
 
 .fade-up.two {
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 }
 
 .fade-up.three {
-    animation-delay: 3s;
+    animation-delay: 2.5s;
 }
 
 @keyframes fadeUp {
@@ -62,3 +59,7 @@ html {
       scrollbar-width: none;
     }
   }
+
+.no_scroll {
+    overflow: hidden !important;
+}

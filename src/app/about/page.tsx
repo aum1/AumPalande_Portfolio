@@ -1,7 +1,6 @@
 'use client'
 import NavigationBar from '@/components/NavigationBar';
 import WorkExperience from '@/components/WorkExperience';
-import { TypeAnimation } from 'react-type-animation';
 
 export default function About() {
   return (
@@ -20,7 +19,8 @@ function AboutMe() {
   return (
     <>
         <div className="w-1/2 flex flex-row justify-center mx-auto mb-20">
-            <img className="w-1/2 h-1/2 my-auto rounded-full" src="other/smaller_ring_image.png" alt="Self image"/>
+        
+            <img className="glow-image w-1/2 h-1/2 my-auto rounded-full" src="other/smaller_ring_image.png" alt="Self image"/>
             <div className="pl-12 align-text-middle">
                 <h1 className="text-green-400 text-5xl leading-relaxed mb-4">Aum Palande</h1>
                 <p className="text-green-200 text-lg leading-relaxed mb-4">

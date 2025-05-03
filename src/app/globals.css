@@ -63,3 +63,56 @@ body {
 .no_scroll {
     overflow: hidden !important;
 }
+
+.glow-image {
+    color: #111;
+    background: green;
+    box-shadow: 0 0 100px green;
+}
+
+@keyframes opacity-glow {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.background-glow {
+    animation: opacity-glow 4s infinite;
+    background: linear-gradient(45deg, #00ff00);
+    background-size: 400% 400%;
+    -webkit-text-fill-color: transparent;
+}
+
+.background-glow.one {
+    animation-delay: 0s;
+}
+
+.background-glow.two {
+    animation-delay: 0.5s;
+}
+
+.background-glow.three {
+    animation-delay: 1s;
+}
+
+.background-glow.four {
+    animation-delay: 1.5s;
+}
+
+.background-glow.five {
+    animation-delay: 2s;
+}
+
+.background-glow.six {
+    animation-delay: 2.5s;
+}
+
+.background-glow.seven {
+    animation-delay: 3s;
+}

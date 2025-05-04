@@ -7,7 +7,7 @@ const SingleDog = ({id, name, x, y, color} : {id: string, name: string, x: numbe
     const [dogName, setDogName] = useState(name)
     const [dogID, setDogID] = useState(id);
     const [dogColor, setDogColor] = useState(color)
-    const [rightMoveEffect, setRightMoveEffect] = useState(false)
+    const [rightMoveEffect,  setRightMoveEffect] = useState(false)
     const [leftMoveEffect, setLeftMoveEffect] = useState(false)
     const [src, setSrc] = useState("dogs/" + dogColor + "_dog/" + dogColor + "_dog_still_right.png")
     // const [src, setSrc] = useState("dogs/red_dog/red_dog_still_right.png")
@@ -29,11 +29,13 @@ const SingleDog = ({id, name, x, y, color} : {id: string, name: string, x: numbe
         const randomNumber = Math.random();
         if (randomNumber > 0.5) {
             setRightMoveEffect(true)
+            setXPos(xPos + 500)
             setSrc("dogs/" + dogColor + "_dog/" + dogColor + "_dog_walk_right_full.gif")
             // setSrc("dogs/red_dog/red_dog_walk_right_full.gif")
         }
         else {
             setLeftMoveEffect(true)
+            setXPos(xPos - 200)
             setSrc("dogs/" + dogColor + "_dog/" + dogColor + "_dog_walk_left_full.gif")
             // setSrc("dogs/red_dog/red_dog_walk_left_full.gif")
         }
@@ -42,7 +44,7 @@ const SingleDog = ({id, name, x, y, color} : {id: string, name: string, x: numbe
     function clearMove() {
         // last move was to the right
         if (rightMoveEffect) {
-            setXPos(xPos + 500)
+            setXPos(xPos + 200)
             console.log("id: " + src)
             setSrc("dogs/" + dogColor + "_dog/" + dogColor + "_dog_still_right.png")
             console.log("id: " + src)

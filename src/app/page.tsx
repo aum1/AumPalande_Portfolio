@@ -1,6 +1,7 @@
 import NavigationBar from '@/components/NavigationBar'
 import Intro from "@/components/Intro";
 import BackgroundDots from '@/components/BackgroundDots';
+import DogGameBuilder from '@/components/DogGame/DogGameBuilder';
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
             </div>
 
             <div>
-                <BackgroundDots />
+                <BackgroundDots isAnimated={true}/>
             </div>
         </div>
     </div>

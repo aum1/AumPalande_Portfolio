@@ -5,8 +5,8 @@ import { CollarColor } from "@/EnumStates/DogCollarColors";
 const DogGameBuilder = () => {
     return (
         <div>
-            <SingleDog id={"1"} name={"Doggy"} x={500} y={0} color={CollarColor.Yellow}/>
-            <SingleDog id={"2"} name={"Second Dog"} x={900} y={0} color={CollarColor.Purple}/>
+            <SingleDog id={"1"} name={"Doggy"} x={500} y={400} color={CollarColor.Yellow}/>
+            <SingleDog id={"2"} name={"Second Dog"} x={900} y={400} color={CollarColor.Purple}/>
             <GroundBuilder />
         </div>
     )

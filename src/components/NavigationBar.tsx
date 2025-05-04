@@ -21,12 +21,6 @@ const NavigationBar = () => {
                             <li>
                                 <Link href="/portfolio" className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:dark:hover:bg-transparent">Portfolio</Link>
                             </li>
-                            <li>
-                                <Link href="#" className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:dark:hover:bg-transparent">Resume</Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:bg-transparent">Contact Me</Link>
-                            </li>
                         </ul>
                     </div>
                 </div>

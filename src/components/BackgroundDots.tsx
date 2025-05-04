@@ -1,7 +1,11 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 
-const BackgroundDots = () => {
+interface BackgroundDotsProps {
+    isAnimated: boolean;
+}
+
+const BackgroundDots = ({ isAnimated } : BackgroundDotsProps) => {
     const timingValues = ['one', 'two', 'three', 'four', 'five', 'six', 'seven'];
 
     function getRandomTiming() {
@@ -52,7 +56,7 @@ const BackgroundDots = () => {
   return (
     <div>
       {Object.entries(dots).map(([key, dot]) => (
-        <div key={key} className={`background-glow ${dot.timing}`} style={{
+        <div key={key} className={`${isAnimated ? `background-glow ${dot.timing}` : ""}`} style={{
             position: 'absolute',
             top: `${dot.top}%`,
             left: `${dot.left}%`,

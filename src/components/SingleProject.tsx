@@ -19,7 +19,7 @@ interface SingleProjectProps {
     badges: string[];
     githubLink: string;
     documentationLink: string;
-  }
+}
 
 const SingleProject = ({title, description, detailedDescription, imageSrc, badges, githubLink, documentationLink}: SingleProjectProps) => {
   const [expanded, setExpanded] = useState(false);

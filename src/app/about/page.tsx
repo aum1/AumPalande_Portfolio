@@ -1,6 +1,7 @@
 'use client'
 import NavigationBar from '@/components/NavigationBar';
 import WorkExperience from '@/components/WorkExperience';
+import BackgroundDots from '@/components/BackgroundDots';
 
 export default function About() {
   return (
@@ -10,6 +11,9 @@ export default function About() {
       <h1 className="text-3xl text-center font-bold text-green-400 pr-10">Experience</h1>
       <WorkExperience/>
       <div className="mb-10"></div>
+      <div>
+        <BackgroundDots isAnimated={false}/>
+        </div>
     </div>
   );
 }
